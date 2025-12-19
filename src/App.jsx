@@ -1,16 +1,11 @@
+import Body from "./components/Body.jsx";
 
-
-function App() {
+const App = () => {
   return (
-    <div className='text-3xl text-green-400'>
-      Namaste 
-    </div>
 
-
-
-  
-   
+    <Body />
+    
   )
-}
+};
 
-export default App
+export default App;
