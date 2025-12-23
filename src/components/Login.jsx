@@ -1,13 +1,24 @@
+import Header from "./Header.jsx";
+
 const Login = () => {
     return (
-        <div className="absolute px-8 py-2 bg-gradient-to-b from-black">
-            <img 
-            className="w-35"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
-            alt="logo" 
-            
-            />
+        <div>
+            <Header />
+
+            <form className="w-3/12 absolute p-12 bg-yellow my-36 mx-auto right-0 left-0 text-black">
+            <h1 className="font-bold font-xl py-4">Sign In</h1>
+                <input
+                 type="text" 
+                placeholder="Email Address" 
+                className="py-2 m-2 "  />
+                < input 
+                type="password" 
+                placeholder="Password" 
+                className="py-2 m-2 "/>
+                <button className="p-2 m-4 bg-red-700 px-10 py-auto "  >Sign In</button>
+            </form>
         </div>
+        
     )
 }
 
