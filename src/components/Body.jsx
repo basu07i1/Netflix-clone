@@ -5,15 +5,18 @@ import { RouterProvider } from "react-router-dom";
 
 const Body = () => {
   const appRouter = createBrowserRouter([
+
     {
       path: "/",
-      element: <Browse/>
+      element: <Login/>,
+    },
+    
+    {
+      path: "/browser",
+      element: <Browse/>,
     },
    
-    {
-      path: "/login",
-      element: <Login/>
-    }
+    
   ]);
 
   return (
