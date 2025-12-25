@@ -4,17 +4,21 @@ import { checkValidData } from "../utils/Validate.jsx";
 
 const Login = () => {
     const [isSignInForm , setIsSignInForm ] = useState(true);
+    const [errorMessage , setErrorMessage] = useState(null);
 
     const email = useRef(null);
     const password = useRef(null);
 
     const handleButtonClick = () => {
         //Validate the form Data.
-        //checkValidData(email , password);
+
+        console.log(email.current.value);
+        console.log(password.current.value);
+
+        const message = checkValidData(email.current.value , password.current.value);
         
-        //console.log(email.current.value);
-        //console.log(password.current.value);
-        console.log(email);
+        setErrorMessage(message)
+        
 
     };
 
@@ -55,6 +59,8 @@ const Login = () => {
                 placeholder="Password" 
                 className="py-2 px-8 m-2 cursor-pointer w-full bg-gray-700 text-white rounded-2xl "
                 />
+
+                <p className="text-red-500">{errorMessage}</p>
 
                 <button className="p-2 m-2 cursor-pointer bg-red-700 px-10 py-auto w-full rounded-2xl text-white font-medium " onClick= {handleButtonClick}  >
                     {isSignInForm ? "Sign In" : "Sign Up" }
