@@ -10,6 +10,9 @@
 - Sign Up form.
 - Form validation.
 - useRef Hook
+- Firebase Setup
+- Deploying our app to production.
+- create a sign-up user Account.
 
 # Sign Up form
   -How can you create a reusable form component and toggle between Sign In and Sign Up modes. Here's how:
